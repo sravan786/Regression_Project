@@ -43,10 +43,4 @@ class DataIngestion:
             logging.info('Exception occured during data ingestion stage')
             raise CustomException(e,sys)
 
-# run data ingestion
-if __name__ == '__main__':
-    data = DataIngestion()
-    train_data, test_data = data.initiate_data_ingestion()
-    data_path = DataIngestionConfig()
-    data_transformation = DataTransformation()
-    train_arr, test_arr, file_path = data_transformation.initiate_data_transformation(data_path.train_data_path, data_path.test_data_path)
+
